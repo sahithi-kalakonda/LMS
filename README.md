@@ -3,10 +3,6 @@
 
 #### Git repo: https://github.com/gopinathsjsu/team-project-geek
 
-#### Project journal [Click Here](https://docs.google.com/spreadsheets/d/1Cw4onTsDp3xvPsnA_AqUacQ8RSkzyzpdfxccW9Y9hWk/edit?usp=sharing)
-
-#### Sprint Task Sheet:  [Click Here](https://docs.google.com/spreadsheets/d/1iG29CDJaglWINqSitG6qHHbxlRnjO_E-qQOuyvmYKCY/edit?usp=sharing)
-
 ## XP Core Values Implemented
 #### 1)Simplicity:  
 We evaluated every feature needed for the program as a team and selected the most straightforward yet efficient tools and technologies.
