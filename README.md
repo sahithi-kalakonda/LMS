@@ -62,7 +62,7 @@ https://docs.google.com/document/d/1vrqAj7YE6IBqvAOLKWZnrKUCE4i3k6yB1muvOc8AXrU/
 1. Clone the project
 
 ```bash
-git clone https://github.com/nz-m/LMS.git
+git clone https://github.com/sahithi-kalakonda/LMS.git
 ```
 
 2. Go to the project directory
