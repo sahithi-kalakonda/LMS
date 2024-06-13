@@ -57,56 +57,62 @@ https://docs.google.com/document/d/1vrqAj7YE6IBqvAOLKWZnrKUCE4i3k6yB1muvOc8AXrU/
 ![image](https://github.com/gopinathsjsu/team-project-geek/assets/64256985/0b1127ca-a590-47eb-8017-e5d7fb5a920c)
 
 
+## Run Locally
 
-# **Project Requirements:**
+1. Clone the project
 
-## Use Case:
+```bash
+git clone https://github.com/nz-m/LMS.git
+```
 
-Implement an end2end Learning Management System application (similar to Canvas), with the specified feature requirements listed here.
+2. Go to the project directory
 
-The emphasis here is on team collaboration, so the points awarded will be based on individual contributions to the team and how the team performed overall.  
+```bash
+cd LMS
+```
 
-- ### **Components**
-1. APIs - input and output of API should be in JSON and should include error handling and validation of inputs
-2. APIs will be demonstrated using a Web/mobile UI
-3. UI is accessed by Faculty, Students, and Admin-  (3 roles)
-4. APIs should support following functionality:
-   
-- **For all Faculty:**
-> View Homepage with list of courses taught by the Faculty member in current and previous semesters
+3. Create a virtual environment and activate it (Windows)
 
-> Current courses will include Published and Unpublished courses
+```bash
+python -m venv env
+```
 
-> Add content to Syllabus section
+```bash
+env\Scripts\activate
+```
 
-> View student list for each course
+4. Install dependencies
 
-> View grades for each student for each course
+```bash
+pip install -r requirements.txt
+```
 
-> Assign grades
+> **Note:** If you're using newer versions of python(3.10+), you may need to add the `--use-deprecated=legacy-resolver` option when installing dependencies with `pip` to avoid errors :
 
-> Add Assignments and Quizzes
+```bash
+pip install -r requirements.txt --use-deprecated=legacy-resolver
+```
 
-> Post announcements
-- **For Students:**
-> View list of enrolled courses in current and previous semesters (course enrollment is outside the scope of this application)
+5. Make migrations and migrate
 
-> For each course view content if the course is published
+```bash
+python manage.py makemigrations
+```
 
-> View published quizzes and published assignments
+```bash
+python manage.py migrate
+```
 
-> View my own grades in each enrolled course
-> Set profile information including notifications
+6. Create admin/superuser
 
-- **For Admins:**
->View courses by Faculty by semester
+```bash
+python manage.py createsuperuser
+```
 
->Assign a course to a Faculty for a new semester
+7. Finally run the project
 
->View student list for each course (no grades visible)
+```bash
+python manage.py runserver
+```
 
->APIs and UI functionality will be available based on Roles specified above
-
-- Deploy API and Database to AWS or another cloud provider in an Auto Scaled EC2 Cluster with Load Balancer
-- Develop a Web or mobile UI that will call the deployed APIs
-- Create your own database with mock data for Courses, Faculty, Students
+Now the project should be running on http://127.0.0.1:8000/
